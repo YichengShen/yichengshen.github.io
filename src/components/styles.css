@@ -1,0 +1,19 @@
+.title {
+    font-family: CinzelBold;
+    margin:0;
+    position: relative;
+    display: table;
+    padding:0 10px;
+}
+.title::after {
+  content: '';
+  background-image: linear-gradient(to right, rgb(216, 198, 252) , rgb(197, 235, 252));
+  height: 40%;
+  position: absolute;
+  top: 65%;
+  -webkit-transform: translateY(-20%);
+  transform: translateY(-20%);
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}

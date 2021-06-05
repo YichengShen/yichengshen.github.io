@@ -1,0 +1,146 @@
+{
+	"about":{
+		"name":"Yicheng Shen",
+        "photo":"assets/images/my_photo.JPG",
+        "description":"Hi! My name is Yicheng Shen. I also go by Mark. I am a student at Boston College majoring in Computer Science and minoring in Finance. I work as undergraduate TA and RA for the CS department. My research interest is about distributed machine learning.",
+        "github":"https://github.com/YichengShen",
+        "linkedin":"https://www.linkedin.com/in/yichengshen",
+        "twitter":"https://twitter.com/shen_yicheng"
+	},
+	"publications":[
+		{
+			"title":"CarML: Distributed Machine Learning in Vehicular Clouds",
+			"authors":"Anran Du, Yicheng Shen, and Lewis Tseng",
+			"conference":"MobiCom 2020: The 26th Annual International Conference on Mobile Computing and Networking",
+			"tags":[
+				"poster",
+				"research"
+			],
+			"materials":[
+				{
+					"type":"paper",
+					"link":"https://dl.acm.org/doi/10.1145/3372224.3418168"
+				},
+				{
+					"type":"video",
+					"link":"https://youtu.be/EdnEosVmR4Q"
+				}
+			]
+		},
+		{
+			"title":"Enabling Pervasive Federated Learning using Vehicular Virtual Edge Servers",
+			"authors":"Anran Du, Yicheng Shen, Lewis Tseng, Takamasa Higuchi, Seyhan Ucar, and Onur Altintas",
+			"conference":"PerCom Work in Progress on Pervasive Computing and Communications 2021s",
+			"tags":[
+				"paper",
+				"research"
+			],
+			"materials":[]
+		}
+	],
+	"projects":[
+		{
+			"id": "evalsys",
+			"title":"Eagles Peer Evaluation System",
+			"category": ["software"],
+			"date":"Spring 2020",
+			"abstract":"A software that allows professors to create peer evaluations and students to evaluate each other. Professors can easily manage courses, teams, and created peer evaluations. Students can fill out peer evaluations. Professors will see aggregated results once students finish their peer evaluations. Students will see their score and comments once professors release the results.",
+			"details":"Eagles Peer Evaluation System is a software that allows professors to create peer evaluations and students to evaluate each other. Professors can easily manage courses, teams, and created peer evaluations. Students can fill out peer evaluations. Professors will see aggregated results once students finish their peer evaluations. Students will see their score and comments once professors release the results.",
+			"documents":[],
+			"images":[
+				{
+					"img_name":"Login Page",
+					"img":"assets/images/eval_system/p-login.gif"
+				},
+				{
+					"img_name":"Team Management Page",
+					"img":"assets/images/eval_system/team-management.gif"
+				},
+				{
+					"img_name":"Assessment Management",
+					"img":"assets/images/eval_system/assessment-management.gif"
+				},
+				{
+					"img_name":"Assessment Creation",
+					"img":"assets/images/eval_system/assessment-creation.png"
+				}
+			]
+		},
+		{
+			"id": "alphagame",
+			"title":"AlphaGame",
+			"category": ["ml"],
+			"date":"Fall 2020",
+			"abstract":"A project that utilizes reinforcement learning algorithms as cores of AI to play simple games.",
+			"details":"AlphaGame aims to use machine learning to play simple games. This project utilizes reinforcement learning algorithms as cores of AI to play simple games. In the paper, we first discuss how the theories of Deep Q-Learning and genetic algorithm relate to our design choices and implementation. Then, we explain methods which include our model architectures and real-time data collection methods, followed by a discussion of our results. We evaluate the performance of two AI on three games, Snake, Pong, and Flappy Bird.",
+			"documents":[
+				{
+					"type":"paper",
+					"link":"assets/files/AlphaGame.pdf"
+				}
+			],
+			"images":[
+				{
+					"img_name":"Performance Plots",
+					"img":"assets/images/performance.png"
+				}
+			]
+		},
+		{
+			"id":"carspeech",
+			"title":"CarSpeech",
+			"category": ["nlp", "ml"],
+			"date":"Fall 2020",
+			"abstract":"A NLP project that trains CNN to recognize speech in noisy environment in cars. CarSpeech focuses on comparing results of different ML models under various noise levels.",
+			"details":"CarSpeech is a NLP project that trains CNN to recognize speech in noisy environment in cars. It focuses on comparing results of different ML models under various noise levels. Nowadays, people spend a lot of time in cars and they might need to use virtual assisstants, like Siri, when they are driving. So, virtual assisstants need to be powerful enough to understand human speech under background noises. This project evaluates some of the ML models that can be used for speech recognition under different noise levels.",
+			"documents":[
+				{
+					"type":"documentation",
+					"link":"https://yichengshen.github.io/car_speech/"
+				}
+			],
+			"images":[
+				{
+					"img_name":"Accuracy",
+					"img":"assets/images/carspeech_table.png",
+					"caption":"The table reports the 10-fold cross validation accuracy of our best CNN model under different noise levels. (35U means 35 mph, windows down. 35U means 35 mph, windows up.)"
+				},
+				{
+					"img_name":"Boxplot",
+					"img":"assets/images/carspeech_boxplot.png",
+					"caption":"The boxplot is generated using the data in the table. It shows that our model clearly achieved higher accuracy when the noise level is lower."
+				}
+			]
+		}
+	],
+	"news":[
+		{
+			"title": "TA for Software Engineering",
+			"date": "Feburary 2021"
+		},
+		{
+			"title": "Paper accepted by PerCom WiP 2021",
+			"date": "Feburary 2021"
+		},
+		{
+			"title": "Received ACM Student Research Competition award",
+			"date": "September 2020"
+		},
+		{
+			"title": "Poster accepted by MobiCom 2020",
+			"date": "September 2020"
+		},
+		{
+			"title": "TA for Algorithms",
+			"date": "January 2020"
+		},
+		{
+			"title": "TA for CS1",
+			"date": "August 2018"
+		},
+		{
+			"title": "Entered Boston College",
+			"date": "August 2017"
+		}
+	]
+}

@@ -1,0 +1,33 @@
+.center {
+    text-align: center;
+}
+
+.aspectRatio {
+    position: relative;
+}
+.aspectRatio::after {
+    content: "";
+    padding-bottom: 100%;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    max-width: 288px;
+    max-height: 288px;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.text {
+    margin: 0 30px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .profileImage {
+        max-width: 218px;
+        max-height: 218px;
+    }
+}

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'ArvoBold';
+  src: local('ArvoBold'), url(./fonts/Arvo/Arvo-Bold.ttf) format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'ArvoBoldItalic';
+  src: local('ArvoBoldItalic'), url(./fonts/Arvo/Arvo-BoldItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'ArvoItalic';
+  src: local('ArvoItalic'), url(./fonts/Arvo/Arvo-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'ArvoRegular';
+  src: local('ArvoRegular'), url(./fonts/Arvo/Arvo-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'CinzelBold';
+  src: local('CinzelBold'), url(./fonts/Cinzel/static/Cinzel-Black.ttf) format('truetype');
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  font-family: ArvoRegular, ArvoBold, ArvoItalic, ArvoBoldItalic, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

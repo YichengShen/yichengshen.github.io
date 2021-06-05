@@ -1,0 +1,12 @@
+.container{
+    max-width: 1366px;
+    margin: auto;
+    padding: 0px 10px;
+}
+
+.nameHeading {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    margin: 25px 0px;
+  }
