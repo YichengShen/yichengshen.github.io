@@ -58,6 +58,8 @@ const Header = () => {
                 marginX: '10vw',
                 marginTop: 2.5,
                 borderRadius: '25px',
+                WebkitBorderRadius: '25px',
+                WebkitMaskImage: '-webkit-radial-gradient(white, black)',
                 overflow: 'hidden',
                 display: 'flex', 
                 justifyContent: 'center',
@@ -130,7 +132,7 @@ const Header = () => {
                 
             </Box>
             
-        </Box>
+        </Box>   
       
     );
   };
