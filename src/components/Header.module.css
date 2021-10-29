@@ -1,21 +1,21 @@
 .nameHeading {
-    font-size: 9vw;
+  font-size: 9vw;
 }
 
 @media screen and (min-width: 481px) {
-    .nameHeading {
-      font-size: 7vw;
-    }
+  .nameHeading {
+    font-size: 7vw;
+  }
 }
 
 @media screen and (min-width: 769px) {
-    .nameHeading {
-      font-size: 6vw;
-    }
+  .nameHeading {
+    font-size: 6vw;
+  }
 }
 
 @media screen and (min-width: 1025px) {
-    .nameHeading {
-      font-size: 4vw;
-    }
+  .nameHeading {
+    font-size: 4vw;
+  }
 }
