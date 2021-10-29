@@ -1,0 +1,38 @@
+.stickyHeader {
+    position: -webkit-sticky; 
+    position: sticky; 
+    top: 0;
+    background-color: white;
+    z-index: 99;
+}
+
+.underlineLink {
+    position: relative;
+}
+
+.underlineLink::after {
+    content: '';
+    background-image: linear-gradient(to right, rgb(216, 198, 252) , rgb(197, 235, 252));
+    height: 30%;
+    position: absolute;
+    top: 70%;
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.underlineLink:hover::after {
+    content: '';
+    background-image: linear-gradient(to right, rgb(216, 198, 252) , rgb(197, 235, 252));
+    height: 95%;
+    position: absolute;
+    top: 10%;
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
