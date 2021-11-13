@@ -19,6 +19,7 @@ const Publications = (props) => {
 
   return (
     <Box
+      id="publications"
       sx={{
         bgcolor: grey[100],
         width: "75vw",
@@ -38,7 +39,7 @@ const Publications = (props) => {
             marginLeft: 2,
           }}
         >
-          <h1 id="about">Publications</h1>
+          <h1>Publications</h1>
         </Box>
         {data.map((d) => (
           <Grid container spacing={3} key={d.title} sx={{ marginBottom: 4 }}>

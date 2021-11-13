@@ -20,6 +20,7 @@ const About = (props) => {
 
   return (
     <Box
+      id="about"
       sx={{
         bgcolor: grey[100],
         width: "75vw",
@@ -41,7 +42,7 @@ const About = (props) => {
             marginLeft: 2,
           }}
         >
-          <h1 id="about">About</h1>
+          <h1>About</h1>
         </Box>
         <Grid container>
           <Grid item xs={12} sm>

@@ -30,7 +30,15 @@ const Navbar = () => {
                     </div>
                   </Item>
                   <Item>
-                    <div className={css.underlineLink}>Publications</div>
+                    <div className={css.underlineLink}>
+                      <Link
+                        href="#publications"
+                        underline="none"
+                        color="inherit"
+                      >
+                        Publications
+                      </Link>
+                    </div>
                   </Item>
                   <Item>
                     <div className={css.underlineLink}>Projects</div>
