@@ -52,7 +52,7 @@ const About = (props) => {
                   process.env.PUBLIC_URL +
                   "/images/profile/photo" +
                   PhotoIdx +
-                  ".jpg"
+                  ".png"
                 }
                 alt="me"
                 onMouseMove={(event) => handleMouseMove(event)}
