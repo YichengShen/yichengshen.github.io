@@ -1,0 +1,36 @@
+.myLink {
+  position: relative;
+}
+.myLink::after {
+  content: "";
+  background-image: linear-gradient(
+    to right,
+    rgb(216, 198, 252),
+    rgb(197, 235, 252)
+  );
+  height: 12%;
+  position: absolute;
+  top: 100%;
+  -webkit-transform: translateY(-30%);
+  transform: translateY(-30%);
+  left: 0;
+  width: 100%;
+  z-index: auto;
+  transition: 0.3s;
+}
+.myLink:hover::after {
+  content: "";
+  background-image: linear-gradient(
+    to right,
+    rgb(197, 235, 252),
+    rgb(216, 198, 252)
+  );
+  height: 25%;
+  position: absolute;
+  top: 115%;
+  -webkit-transform: translateY(-30%);
+  transform: translateY(-30%);
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}

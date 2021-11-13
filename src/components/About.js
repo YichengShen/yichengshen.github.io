@@ -37,6 +37,7 @@ const About = (props) => {
         <Box
           sx={{
             textAlign: "left",
+            width: "100%",
             marginLeft: 2,
           }}
         >
