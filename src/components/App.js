@@ -9,6 +9,9 @@ const App = () => {
   const [AboutData, setAboutData] = useState(null);
   const [PublicationsData, setPublicationsData] = useState(null);
 
+  const d = new Date();
+  const year = d.getFullYear();
+
   useEffect(() => {
     const getData = async (path, setData) => {
       const response = await fetch(path);
@@ -35,6 +38,9 @@ const App = () => {
       <Header />
       {AboutData && <About about={AboutData} />}
       {PublicationsData && <Publications publications={PublicationsData} />}
+      <footer style={{ textAlign: "center" }}>
+        Copyright &copy; {year} Yicheng Shen.
+      </footer>
     </>
   );
 };
