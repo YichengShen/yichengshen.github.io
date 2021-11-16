@@ -1,0 +1,5 @@
+title	year	start_month	end_month	website	video	code	data	slides	description
+GoGreen	2021	1	5	https://yichengshen.github.io/go-green/#/	https://youtu.be/TNegBiqt9k0	https://github.com/YichengShen/go-green			A data-centric web application that increases people's awareness of environmental issues and promotes eco-friendly transportation.
+AlphaGame	2020	9	12			https://github.com/ZQZCalin/DQN-model-trained-on-Round-based-games			"AI agents trained with 2 algorithms to make smart decisions in 3 games, Snake, Pong, and Flappy Bird."
+CarSpeech	2020	10	11	https://yichengshen.github.io/car_speech/		https://github.com/YichengShen/car_speech	http://www.isle.illinois.edu/sst/AVICAR/		Built convolutional neural network models using Tensorflow to classify important words in human speech from the AVICAR dataset recorded in vehicles.
+Student Evaluation System	2020	1	5			https://github.com/YichengShen/EaglesPeerEvaluationSystem			A software that enables students to fill out peer reviews online and then aggregates the results for instructors.
