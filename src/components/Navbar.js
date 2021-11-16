@@ -41,7 +41,11 @@ const Navbar = () => {
                     </div>
                   </Item>
                   <Item>
-                    <div className={css.underlineLink}>Projects</div>
+                    <div className={css.underlineLink}>
+                      <Link href="#projects" underline="none" color="inherit">
+                        Projects
+                      </Link>
+                    </div>
                   </Item>
                 </Box>
               </Grid>
