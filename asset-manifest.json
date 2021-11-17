@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.4b5d7a06.chunk.css",
-    "main.js": "/static/js/main.a663c875.chunk.js",
-    "main.js.map": "/static/js/main.a663c875.chunk.js.map",
+    "main.css": "/static/css/main.54dbcafe.chunk.css",
+    "main.js": "/static/js/main.f33a8fd2.chunk.js",
+    "main.js.map": "/static/js/main.f33a8fd2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f57cdeb6.js",
     "runtime-main.js.map": "/static/js/runtime-main.f57cdeb6.js.map",
     "static/js/2.43e22e90.chunk.js": "/static/js/2.43e22e90.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.bed5ea72.chunk.js": "/static/js/3.bed5ea72.chunk.js",
     "static/js/3.bed5ea72.chunk.js.map": "/static/js/3.bed5ea72.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.4b5d7a06.chunk.css.map": "/static/css/main.4b5d7a06.chunk.css.map",
+    "static/css/main.54dbcafe.chunk.css.map": "/static/css/main.54dbcafe.chunk.css.map",
     "static/js/2.43e22e90.chunk.js.LICENSE.txt": "/static/js/2.43e22e90.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/Cinzel-Black.ff8637ad.ttf"
+    "static/media/index.css": "/static/media/georgia-italic.714162e4.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.f57cdeb6.js",
     "static/js/2.43e22e90.chunk.js",
-    "static/css/main.4b5d7a06.chunk.css",
-    "static/js/main.a663c875.chunk.js"
+    "static/css/main.54dbcafe.chunk.css",
+    "static/js/main.f33a8fd2.chunk.js"
   ]
 }
