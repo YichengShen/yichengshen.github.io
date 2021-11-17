@@ -42,7 +42,7 @@ const App = () => {
       {AboutData && <About about={AboutData} />}
       {PublicationsData && <Publications publications={PublicationsData} />}
       {ProjectsData && <Projects projects={ProjectsData} />}
-      <footer style={{ textAlign: "center" }}>
+      <footer style={{ textAlign: "center", marginTop: "2vh" }}>
         Copyright &copy; {year} Yicheng Shen.
       </footer>
     </>

@@ -129,11 +129,13 @@ const ProjectDate = (props) => {
   const end_month = months[d.end_month - 1];
 
   return (
-    <em>
-      <small>
-        {start_month} {end_month && <span>- {end_month}</span>} {year}
-      </small>
-    </em>
+    <Box sx={{ color: grey[600] }}>
+      <em>
+        <small>
+          {start_month} {end_month && <span>- {end_month}</span>} {year}
+        </small>
+      </em>
+    </Box>
   );
 };
 

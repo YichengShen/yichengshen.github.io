@@ -1,23 +1,30 @@
-Cinzel Variable Font
-====================
+Playfair Display Variable Font
+==============================
 
-This download contains Cinzel as both a variable font and static fonts.
+This download contains Playfair Display as both variable fonts and static fonts.
 
-Cinzel is a variable font with this axis:
+Playfair Display is a variable font with this axis:
   wght
 
-This means all the styles are contained in a single file:
-  Cinzel-VariableFont_wght.ttf
+This means all the styles are contained in these files:
+  PlayfairDisplay-VariableFont_wght.ttf
+  PlayfairDisplay-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Cinzel:
-  static/Cinzel-Regular.ttf
-  static/Cinzel-Medium.ttf
-  static/Cinzel-SemiBold.ttf
-  static/Cinzel-Bold.ttf
-  static/Cinzel-ExtraBold.ttf
-  static/Cinzel-Black.ttf
+in those cases you can use the static font files for Playfair Display:
+  static/PlayfairDisplay-Regular.ttf
+  static/PlayfairDisplay-Medium.ttf
+  static/PlayfairDisplay-SemiBold.ttf
+  static/PlayfairDisplay-Bold.ttf
+  static/PlayfairDisplay-ExtraBold.ttf
+  static/PlayfairDisplay-Black.ttf
+  static/PlayfairDisplay-Italic.ttf
+  static/PlayfairDisplay-MediumItalic.ttf
+  static/PlayfairDisplay-SemiBoldItalic.ttf
+  static/PlayfairDisplay-BoldItalic.ttf
+  static/PlayfairDisplay-ExtraBoldItalic.ttf
+  static/PlayfairDisplay-BlackItalic.ttf
 
 Get started
 -----------
@@ -62,7 +69,7 @@ Please read the full license text (OFL.txt) to understand the permissions,
 restrictions and requirements for usage, redistribution, and modification.
 
 You can use them freely in your products & projects - print or digital,
-commercial or otherwise. However, you can't sell the fonts on their own.
+commercial or otherwise.
 
 This isn't legal advice, please consider consulting a lawyer and see the full
 license for all details.

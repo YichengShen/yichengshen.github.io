@@ -19,15 +19,15 @@
   object-fit: cover;
   border-radius: 10px;
 }
-
-.text {
-  margin: 0 30px;
-  text-align: left;
-}
-
 @media only screen and (max-width: 768px) {
   .profileImage {
     max-width: 218px;
     max-height: 218px;
   }
+}
+
+.text {
+  font-size: larger;
+  margin: 0 30px;
+  text-align: left;
 }

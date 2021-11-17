@@ -1,34 +1,42 @@
 @font-face {
-  font-family: "ArvoBold";
-  src: local("ArvoBold"), url(./fonts/Arvo/Arvo-Bold.ttf) format("truetype");
-  font-weight: bold;
+  font-family: "Georgia";
+  src: local("Georgia"), url(./fonts/Georgia/Georgia.ttf) format("truetype");
 }
 @font-face {
-  font-family: "ArvoBoldItalic";
-  src: local("ArvoBoldItalic"),
-    url(./fonts/Arvo/Arvo-BoldItalic.ttf) format("truetype");
+  font-family: "GeorgiaBold";
+  src: local("GeorgiaBold"),
+    url(./fonts/Georgia/georgia-bold.ttf) format("truetype");
 }
 @font-face {
-  font-family: "ArvoItalic";
-  src: local("ArvoItalic"), url(./fonts/Arvo/Arvo-Italic.ttf) format("truetype");
+  font-family: "GeorgiaItalic";
+  src: local("GeorgiaItalic"),
+    url(./fonts/Georgia/georgia-italic.ttf) format("truetype");
 }
 @font-face {
-  font-family: "ArvoRegular";
-  src: local("ArvoRegular"),
-    url(./fonts/Arvo/Arvo-Regular.ttf) format("truetype");
+  font-family: "GeorgiaBoldItalic";
+  src: local("GeorgiaBoldItalic"),
+    url(./fonts/Georgia/georgia-bold-italic.ttf) format("truetype");
 }
 @font-face {
-  font-family: "CinzelBold";
-  src: local("CinzelBold"),
-    url(./fonts/Cinzel/static/Cinzel-Black.ttf) format("truetype");
-  font-weight: bold;
+  font-family: "PlayfairDisplay";
+  src: local("PlayfairDisplay"),
+    url(./fonts/PlayfairDisplay/PlayfairDisplay-VariableFont_wght.ttf)
+      format("truetype");
+}
+@font-face {
+  font-family: "PlayfairDisplayItalic";
+  src: local("PlayfairDisplayItalic"),
+    url(./fonts/PlayfairDisplay/PlayfairDisplay-Italic-VariableFont_wght.ttf)
+      format("truetype");
 }
 
 body {
+  color: rgb(0, 18, 66);
   margin: 0;
-  font-family: ArvoRegular, ArvoBold, ArvoItalic, ArvoBoldItalic, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: Georgia, GeorgiaBold, GeorgiaItalic, GeorgiaBoldItalic,
+    PlayfairDisplay, PlayfairDisplayItalic, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,4 +44,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1,
+h2 {
+  font-family: PlayfairDisplay;
+  font-weight: 800;
 }

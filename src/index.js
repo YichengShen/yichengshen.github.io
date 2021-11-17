@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import "./fonts/Arvo/Arvo-Bold.ttf";
-import "./fonts/Arvo/Arvo-BoldItalic.ttf";
-import "./fonts/Arvo/Arvo-Italic.ttf";
-import "./fonts/Arvo/Arvo-Regular.ttf";
-import "./fonts/Cinzel/static/Cinzel-Black.ttf";
+import "./fonts/Georgia/Georgia.ttf";
+import "./fonts/Georgia/georgia-bold.ttf";
+import "./fonts/Georgia/georgia-italic.ttf";
+import "./fonts/Georgia/georgia-bold-italic.ttf";
+import "./fonts/PlayfairDisplay/PlayfairDisplay-VariableFont_wght.ttf";
+import "./fonts/PlayfairDisplay/PlayfairDisplay-Italic-VariableFont_wght.ttf";
+
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
 
