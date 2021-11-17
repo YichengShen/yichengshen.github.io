@@ -90,10 +90,13 @@ const ProjectContent = (props) => {
 
   return (
     <div>
-      <Box sx={{ fontSize: "Large" }}>
+      <Box sx={{ fontSize: "x-large" }}>
         <strong>{d.title}</strong>
       </Box>
-      <Box sx={{ marginBottom: 0.8 }} />
+      <Box sx={{ marginBottom: 0.5 }} />
+
+      <ProjectDate data={d} />
+      <Box sx={{ marginBottom: 1.5 }} />
 
       <div>{d.description}</div>
 
@@ -101,6 +104,36 @@ const ProjectContent = (props) => {
         <ProjectMaterials data={d} />
       </div>
     </div>
+  );
+};
+
+const ProjectDate = (props) => {
+  const d = props.data;
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const year = d.year;
+  const start_month = months[d.start_month - 1];
+  const end_month = months[d.end_month - 1];
+
+  return (
+    <em>
+      <small>
+        {start_month} {end_month && <span>- {end_month}</span>} {year}
+      </small>
+    </em>
   );
 };
 
