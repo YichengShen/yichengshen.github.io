@@ -19,7 +19,7 @@ const Projects = (props) => {
     <Box
       id="projects"
       sx={{
-        bgcolor: grey[100],
+        bgcolor: grey[300],
         width: "75vw",
         padding: "2.5vw",
         marginX: "10vw",
@@ -44,7 +44,7 @@ const Projects = (props) => {
             <Grid item xs={12} md={6} xl={4} key={d.title}>
               <Box
                 sx={{
-                  bgcolor: grey[300],
+                  bgcolor: grey[100],
                   padding: 2,
                   borderRadius: "25px",
                   overflow: "hidden",
