@@ -1,4 +1,6 @@
 title	year	start_month	end_month	website	video	code	data	slides	description
+Kaggle: Google Landmark Recognition 2021	2021	8	10				https://www.kaggle.com/c/landmark-recognition-2021/data		A competition about labeling landmarks in images. Awarded Silver Medal. Ranked top 10%.
+Kaggle: Google Smartphone Decimeter Challenge	2021	5	8				https://www.kaggle.com/c/google-smartphone-decimeter-challenge/data		A competition about enhancing accuracy of GPS positioning. Awarded Bronze Medal. Ranked top 10%.
 GoGreen	2021	1	5	https://yichengshen.github.io/go-green/#/	https://youtu.be/TNegBiqt9k0	https://github.com/YichengShen/go-green			A data-centric web application that increases people's awareness of environmental issues and promotes eco-friendly transportation.
 AlphaGame	2020	9	12			https://github.com/ZQZCalin/DQN-model-trained-on-Round-based-games			"AI agents trained with 2 algorithms to make smart decisions in 3 games, Snake, Pong, and Flappy Bird."
 CarSpeech	2020	10	11	https://yichengshen.github.io/car_speech/		https://github.com/YichengShen/car_speech	http://www.isle.illinois.edu/sst/AVICAR/		Built convolutional neural network models using Tensorflow to classify important words in human speech from the AVICAR dataset recorded in vehicles.
