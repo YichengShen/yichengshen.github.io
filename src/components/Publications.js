@@ -62,7 +62,7 @@ const PubImage = (props) => {
   const titleStrip = title.toLowerCase().trim();
   const titleNoSymbol = titleStrip.replace(/[^\w\s]/gi, "");
   const titleClean = titleNoSymbol.replace(/\s/g, "-");
-  const imagePath = `${process.env.PUBLIC_URL}/files/publications/${type}/${titleClean}/image.png`;
+  const imagePath = `${process.env.PUBLIC_URL}/files/publications/${type}/${titleClean}/image.jpg`;
 
   console.log(imagePath);
 

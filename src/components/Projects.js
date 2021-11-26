@@ -73,7 +73,7 @@ const ProjectImage = (props) => {
   const titleStrip = title.toLowerCase().trim();
   const titleNoSymbol = titleStrip.replace(/[^\w\s]/gi, "");
   const titleClean = titleNoSymbol.replace(/\s/g, "-");
-  const imagePath = `${process.env.PUBLIC_URL}/files/projects/${year}/${titleClean}/image.png`;
+  const imagePath = `${process.env.PUBLIC_URL}/files/projects/${year}/${titleClean}/image.jpg`;
 
   //   console.log(imagePath);
 
