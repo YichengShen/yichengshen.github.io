@@ -1,4 +1,4 @@
-# Notes
+# Notes from the developer
 
 ## About Section
 
@@ -17,6 +17,20 @@
    - Take the `title` in `public/files/projects.csv`
    - Remove all special characters
    - Replace all ' ' with '-'
+
+## Highlights Section
+
+1. There are 3 types of highlights:
+
+   - achievement
+   - work
+   - life
+
+   Make sure you enter correct `type` in `public/files/highlights.csv`.
+
+2. `year` and `month` in `public/files/highlights.csv` are required. `day` can be left blank. If blank, the code will fill them with 0 (for the convinience of sorting).
+
+3. The default number of highlights shown is 5. Every time the **_SHOW MORE_** button is clicked, the number is incremented by 5. When you toggle the type, the number is reset to 5.
 
 ## Images
 

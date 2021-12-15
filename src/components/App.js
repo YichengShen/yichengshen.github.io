@@ -1,15 +1,19 @@
 import { React, useEffect, useState } from "react";
+import { ThemeProvider } from "@mui/material/styles";
 import { readString } from "react-papaparse";
+import theme from "./theme";
 import Navbar from "./Navbar";
 import Header from "./Header";
 import About from "./About";
 import Publications from "./Publications";
 import Projects from "./Projects";
+import Highlights from "./Highlights";
 
 const App = () => {
   const [AboutData, setAboutData] = useState(null);
   const [PublicationsData, setPublicationsData] = useState(null);
   const [ProjectsData, setProjectsData] = useState(null);
+  const [HighlightsData, setHighlightsData] = useState(null);
 
   const d = new Date();
   const year = d.getFullYear();
@@ -33,19 +37,26 @@ const App = () => {
       setPublicationsData
     );
     getData(`${process.env.PUBLIC_URL}/files/projects.csv`, setProjectsData);
+    getData(
+      `${process.env.PUBLIC_URL}/files/highlights.csv`,
+      setHighlightsData
+    );
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <Header />
-      {AboutData && <About about={AboutData} />}
-      {PublicationsData && <Publications publications={PublicationsData} />}
-      {ProjectsData && <Projects projects={ProjectsData} />}
-      <footer style={{ textAlign: "center", marginTop: "2vh" }}>
-        Copyright &copy; {year} Yicheng Shen.
-      </footer>
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <Navbar />
+        <Header />
+        {AboutData && <About about={AboutData} />}
+        {PublicationsData && <Publications publications={PublicationsData} />}
+        {ProjectsData && <Projects projects={ProjectsData} />}
+        {HighlightsData && <Highlights highlights={HighlightsData} />}
+        <footer style={{ textAlign: "center", marginTop: "2vh" }}>
+          Copyright &copy; {year} Yicheng Shen.
+        </footer>
+      </>
+    </ThemeProvider>
   );
 };
 
