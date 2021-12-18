@@ -17,6 +17,15 @@ import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
 import ReactMapboxGl, { Marker, Popup } from "react-mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+import mapboxgl from "mapbox-gl";
+
+// The following is required to stop "npm build" from transpiling mapbox code.
+// notice the exclamation point in the import.
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+mapboxgl.workerClass =
+  // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+
 const Map = ReactMapboxGl({
   accessToken: process.env.REACT_APP_MAPBOX_KEY,
 });

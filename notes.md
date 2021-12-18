@@ -45,3 +45,4 @@
 4. [How to display Markers on a Mapbox Map in React](https://mariestarck.com/how-to-display-markers-on-a-mapbox-map-mapbox-react-tutorial-part-2/)
 5. [Maki (Mapbox custom markers)](https://labs.mapbox.com/maki-icons/editor/)
 6. [Geocoding API Playground](https://docs.mapbox.com/playground/geocoding/)
+7. [Mapbox problem during deployment](https://stackoverflow.com/questions/65434964/mapbox-blank-map-react-map-gl-reactjs)
