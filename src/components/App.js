@@ -8,12 +8,14 @@ import About from "./About";
 import Publications from "./Publications";
 import Projects from "./Projects";
 import Highlights from "./Highlights";
+import Travel from "./Travel";
 
 const App = () => {
   const [AboutData, setAboutData] = useState(null);
   const [PublicationsData, setPublicationsData] = useState(null);
   const [ProjectsData, setProjectsData] = useState(null);
   const [HighlightsData, setHighlightsData] = useState(null);
+  const [TravelData, setTravelData] = useState(null);
 
   const d = new Date();
   const year = d.getFullYear();
@@ -41,6 +43,7 @@ const App = () => {
       `${process.env.PUBLIC_URL}/files/highlights.csv`,
       setHighlightsData
     );
+    getData(`${process.env.PUBLIC_URL}/files/travel.csv`, setTravelData);
   }, []);
 
   return (
@@ -52,6 +55,7 @@ const App = () => {
         {PublicationsData && <Publications publications={PublicationsData} />}
         {ProjectsData && <Projects projects={ProjectsData} />}
         {HighlightsData && <Highlights highlights={HighlightsData} />}
+        {TravelData && <Travel travel={TravelData} />}
         <footer style={{ textAlign: "center", marginTop: "2vh" }}>
           Copyright &copy; {year} Yicheng Shen.
         </footer>

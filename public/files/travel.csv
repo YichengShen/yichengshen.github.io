@@ -1,0 +1,15 @@
+country,city,lng,lat,year,month,purpose,memorable,familiar,current
+US,Boston,-71.0596,42.3605,2017,8,,TRUE,TRUE,
+US,Poughkeepsie,-73.9284,41.7066,2013,9,,TRUE,TRUE,
+US,New York City,-73.9866,40.7306,2011,8,,,,
+US,"Washington, D.C.",-77.0366,38.895,2014,11,,,,
+US,Orlando,-81.379,28.5421,2019,11,,,,
+China,Suzhou,120.61642,31.30401,1998,5,,TRUE,TRUE,TRUE
+China,Hangzhou,120.15507,30.2741,2005,1,,TRUE,,
+China,Beijing,116.39139,39.905,2019,7,,,,
+China,Guiyang,112.72829,25.74856,2012,8,,,,
+Canada,Montréal,-73.610364,45.497216,2015,11,,,,
+Canada,Toronto,-79.383935,43.653482,2018,11,,,,
+UK,Bermuda,-64.7370104,32.31792032,2019,3,,TRUE,,
+Thailand,Bangkok,100.51667,13.75,2018,6,,,,
+Thailand,Pattaya,100.87194,12.92306,2018,6,,,,

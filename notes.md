@@ -36,3 +36,12 @@
 
 1. The format of images is **_jpg_**.
 2. Compress images to make the webpage load faster. [Here](https://tinyjpg.com/) is an online compression tool.
+
+## Mapbox Resources
+
+1. [Mapbox API](https://docs.mapbox.com/mapbox-gl-js/api/map/)
+2. [React wrapper for Mapbox](https://visgl.github.io/react-map-gl/)
+3. [ReactMapboxGL](https://github.com/alex3165/react-mapbox-gl/blob/HEAD/docs/API.md)
+4. [How to display Markers on a Mapbox Map in React](https://mariestarck.com/how-to-display-markers-on-a-mapbox-map-mapbox-react-tutorial-part-2/)
+5. [Maki (Mapbox custom markers)](https://labs.mapbox.com/maki-icons/editor/)
+6. [Geocoding API Playground](https://docs.mapbox.com/playground/geocoding/)
