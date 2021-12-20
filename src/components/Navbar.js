@@ -4,15 +4,17 @@ import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import ChatIcon from "@mui/icons-material/Chat";
 import css from "./Navbar.module.css";
+import React from "react";
 
 const Navbar = () => {
   const enoughWidth = useMediaQuery("(min-width:320px)");
+  const someMoreWidth = useMediaQuery("(min-width:468px)");
 
   return (
     <>
       {enoughWidth && (
         <div className={css.stickyHeader}>
-          <Box sx={{ flexGrow: 1, marginX: 2 }}>
+          <Box sx={{ flexGrow: 1, marginX: 2, marginBottom: 4 }}>
             <Grid container spacing={2}>
               <Grid item xs={10}>
                 <Box
@@ -47,6 +49,28 @@ const Navbar = () => {
                       </Link>
                     </div>
                   </Item>
+                  {someMoreWidth && (
+                    <React.Fragment>
+                      <Item>
+                        <div className={css.underlineLink}>
+                          <Link
+                            href="#highlights"
+                            underline="none"
+                            color="inherit"
+                          >
+                            Highlights
+                          </Link>
+                        </div>
+                      </Item>
+                      <Item>
+                        <div className={css.underlineLink}>
+                          <Link href="#travel" underline="none" color="inherit">
+                            Travel
+                          </Link>
+                        </div>
+                      </Item>
+                    </React.Fragment>
+                  )}
                 </Box>
               </Grid>
               <Grid item xs={2}>
@@ -57,9 +81,7 @@ const Navbar = () => {
                     alignItems: "flex-start",
                   }}
                 >
-                  <Item>
-                    <ChatIcon />
-                  </Item>
+                  <Item>{/* <ChatIcon /> */}</Item>
                 </Box>
               </Grid>
             </Grid>
