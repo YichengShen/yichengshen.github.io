@@ -32,6 +32,10 @@
 
 3. The default number of highlights shown is 5. Every time the **_SHOW MORE_** button is clicked, the number is incremented by 5. When you toggle the type, the number is reset to 5.
 
+## Travel Section
+
+1. `show` in `public/files/travel.csv` controls whether a marker is displayed at the initial zoom level. If `show` is TRUE, the marker is always displayed. If not, the marker is displayed when the zoom level is greater than 4.
+
 ## Images
 
 1. The format of images is **_jpg_**.

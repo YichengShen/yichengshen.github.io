@@ -40,6 +40,7 @@ const Travel = (props) => {
     lat: 0,
     year: 2000,
     month: 1,
+    show: false,
     purpose: "",
     memorable: false,
     familiar: false,
@@ -57,6 +58,9 @@ const Travel = (props) => {
         var previousTrip = dataProcessed.find(
           (d) => d.city.toLowerCase() === city
         );
+        if (trips[i].show.toLowerCase() === "true") {
+          previousTrip.show = true;
+        }
         if (trips[i].memorable.toLowerCase() === "true") {
           previousTrip.memorable = true;
         }
@@ -73,6 +77,7 @@ const Travel = (props) => {
         newTrip.lat = parseFloat(trips[i].lat);
         newTrip.year = parseInt(trips[i].year);
         newTrip.month = parseInt(trips[i].month);
+        newTrip.show = trips[i].show.toLowerCase() === "true";
         newTrip.purpose = trips[i].purpose;
         newTrip.memorable = trips[i].memorable.toLowerCase() === "true";
         newTrip.familiar = trips[i].familiar.toLowerCase() === "true";
@@ -230,22 +235,24 @@ const Travel = (props) => {
               >
                 {filteredData.map((d, index) => {
                   return (
-                    <React.Fragment key={`marker-popup-${index}`}>
-                      <CustomMarker
-                        key={`marker-${index}`}
-                        index={index}
-                        d={d}
-                        openPopup={handleOpenPopup}
-                      />
-                      {SelectedIndex !== null && (
-                        <CustomPopup
-                          key={`popup-${index}`}
-                          index={SelectedIndex}
-                          d={filteredData[SelectedIndex]}
-                          closePopup={handleClosePopup}
+                    (Viewport.zoom > 4 || d.show) && (
+                      <React.Fragment key={`marker-popup-${index}`}>
+                        <CustomMarker
+                          key={`marker-${index}`}
+                          index={index}
+                          d={d}
+                          openPopup={handleOpenPopup}
                         />
-                      )}
-                    </React.Fragment>
+                        {SelectedIndex !== null && (
+                          <CustomPopup
+                            key={`popup-${index}`}
+                            index={SelectedIndex}
+                            d={filteredData[SelectedIndex]}
+                            closePopup={handleClosePopup}
+                          />
+                        )}
+                      </React.Fragment>
+                    )
                   );
                 })}
               </Map>
