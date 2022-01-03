@@ -2,6 +2,8 @@
 
 A personal website built with React showcasing publications, projects, etc.
 
+**Website Template Designer & Developer:** [Yicheng Shen](https://github.com/YichengShen)
+
 ## Link to My Personal Website
 
 [www.yichengshen.com](www.yichengshen.com)
