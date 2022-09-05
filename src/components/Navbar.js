@@ -82,6 +82,18 @@ const Navbar = () => {
                   }}
                 >
                   <Item>{/* <ChatIcon /> */}</Item>
+                  <Item>
+                    <div className={css.underlineLink}>
+                      <Link
+                        target="_blank"
+                        href="https://www.yichengshen.com/a-cookbook"
+                        underline="none"
+                        color="inherit"
+                      >
+                        Misc.
+                      </Link>
+                    </div>
+                  </Item>
                 </Box>
               </Grid>
             </Grid>
