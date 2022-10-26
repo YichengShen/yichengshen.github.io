@@ -19,7 +19,7 @@ const Projects = (props) => {
     <Box
       id="projects"
       sx={{
-        bgcolor: grey[300],
+        bgcolor: grey[200],
         width: "75vw",
         padding: "2.5vw",
         marginX: "10vw",

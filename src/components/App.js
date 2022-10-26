@@ -52,8 +52,8 @@ const App = () => {
         <Navbar />
         <Header />
         {AboutData && <About about={AboutData} />}
-        {PublicationsData && <Publications publications={PublicationsData} />}
         {ProjectsData && <Projects projects={ProjectsData} />}
+        {PublicationsData && <Publications publications={PublicationsData} />}
         {HighlightsData && <Highlights highlights={HighlightsData} />}
         {TravelData && <Travel travel={TravelData} />}
         <footer style={{ textAlign: "center", marginTop: "2vh" }}>
