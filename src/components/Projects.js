@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { grey } from "@mui/material/colors";
@@ -8,12 +8,20 @@ import VideocamIcon from "@mui/icons-material/Videocam";
 import CodeIcon from "@mui/icons-material/Code";
 import LanguageIcon from "@mui/icons-material/Language";
 import StorageIcon from "@mui/icons-material/Storage";
+import Button from "@mui/material/Button";
 
 import MyLink from "./MyLink";
 
 const Projects = (props) => {
   const { projects } = props;
   const data = projects;
+
+  let numData = data.length;
+  const [MaxNumProjects, SetMaxNumProjects] = useState(6);
+
+  const handleShowMore = () => {
+    SetMaxNumProjects(MaxNumProjects + 3);
+  };
 
   return (
     <Box
@@ -26,43 +34,60 @@ const Projects = (props) => {
         marginTop: 5,
         borderRadius: "25px",
         overflow: "hidden",
-        display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Box sx={{ textAlign: "left", width: "100%" }}>
+      <Box
+        sx={{
+          display: "flex",
+        }}
+      >
+        <Box sx={{ textAlign: "left", width: "100%" }}>
+          <Box
+            sx={{
+              marginLeft: 2,
+            }}
+          >
+            <h1>Projects</h1>
+          </Box>
+          <Grid container spacing={4}>
+            {data.slice(0, MaxNumProjects).map((d) => (
+              <Grid item xs={12} md={6} xl={4} key={d.title}>
+                <Box
+                  sx={{
+                    bgcolor: grey[100],
+                    padding: 2,
+                    borderRadius: "25px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <Grid container spacing={3} sx={{ marginBottom: 2 }}>
+                    <Grid item xs={12}>
+                      <ProjectImage data={d} />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <ProjectContent data={d} />
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </Box>
+      {numData > MaxNumProjects && (
         <Box
           sx={{
-            marginLeft: 2,
+            marginTop: 2,
+            textAlign: "center",
           }}
         >
-          <h1>Projects</h1>
+          <Button size="small" onClick={handleShowMore}>
+            Show more
+          </Button>
         </Box>
-        <Grid container spacing={4}>
-          {data.map((d) => (
-            <Grid item xs={12} md={6} xl={4} key={d.title}>
-              <Box
-                sx={{
-                  bgcolor: grey[100],
-                  padding: 2,
-                  borderRadius: "25px",
-                  overflow: "hidden",
-                }}
-              >
-                <Grid container spacing={3} sx={{ marginBottom: 2 }}>
-                  <Grid item xs={12}>
-                    <ProjectImage data={d} />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <ProjectContent data={d} />
-                  </Grid>
-                </Grid>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+      )}
     </Box>
   );
 };
