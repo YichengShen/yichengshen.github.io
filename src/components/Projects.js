@@ -9,6 +9,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import LanguageIcon from "@mui/icons-material/Language";
 import StorageIcon from "@mui/icons-material/Storage";
 import Button from "@mui/material/Button";
+import ArticleIcon from "@mui/icons-material/Article";
 
 import MyLink from "./MyLink";
 
@@ -240,6 +241,20 @@ const ProjectMaterials = (props) => {
               <div>
                 <StorageIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
                 Data
+              </div>
+            }
+          />
+        </LinkItem>
+      )}
+
+      {d.report && (
+        <LinkItem>
+          <MyLink
+            link={d.report}
+            text={
+              <div>
+                <ArticleIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
+                Report
               </div>
             }
           />
