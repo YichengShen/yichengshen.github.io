@@ -75,21 +75,24 @@ const Header = () => {
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
               <Grid item xs={4}>
-                <Link href="mailto:yichengshen1016@gmail.com">
+                <Link href="mailto:yichengshen1016@gmail.com" target="_blank">
                   <IconButton>
                     <MailOutlineIcon sx={{ fontSize: "3.5vw" }} />
                   </IconButton>
                 </Link>
               </Grid>
               <Grid item xs={4}>
-                <Link href="https://github.com/YichengShen">
+                <Link href="https://github.com/YichengShen" target="_blank">
                   <IconButton>
                     <GitHubIcon sx={{ fontSize: "3.5vw" }} />
                   </IconButton>
                 </Link>
               </Grid>
               <Grid item xs={4}>
-                <Link href="https://www.linkedin.com/in/yichengshen/">
+                <Link
+                  href="https://www.linkedin.com/in/yichengshen/"
+                  target="_blank"
+                >
                   <IconButton>
                     <LinkedInIcon sx={{ fontSize: "3.5vw" }} />
                   </IconButton>
@@ -104,21 +107,24 @@ const Header = () => {
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
               <Grid item xs={4}>
-                <Link href="mailto:yichengshen1016@gmail.com">
+                <Link href="mailto:yichengshen1016@gmail.com" target="_blank">
                   <IconButton>
                     <MailOutlineIcon sx={{ fontSize: "7vw" }} />
                   </IconButton>
                 </Link>
               </Grid>
               <Grid item xs={4}>
-                <Link href="https://github.com/YichengShen">
+                <Link href="https://github.com/YichengShen" target="_blank">
                   <IconButton>
                     <GitHubIcon sx={{ fontSize: "7vw" }} />
                   </IconButton>
                 </Link>
               </Grid>
               <Grid item xs={4}>
-                <Link href="https://www.linkedin.com/in/yichengshen/">
+                <Link
+                  href="https://www.linkedin.com/in/yichengshen/"
+                  target="_blank"
+                >
                   <IconButton>
                     <LinkedInIcon sx={{ fontSize: "7vw" }} />
                   </IconButton>
