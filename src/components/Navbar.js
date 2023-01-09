@@ -2,7 +2,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-import ChatIcon from "@mui/icons-material/Chat";
 import css from "./Navbar.module.css";
 import React from "react";
 
