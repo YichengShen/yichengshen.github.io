@@ -225,7 +225,7 @@ const Travel = (props) => {
               }}
             >
               <Map
-                style="mapbox://styles/mapbox/streets-v11"
+                style={`mapbox://styles/mapbox/streets-v11`}
                 containerStyle={{
                   height: "366px",
                 }}
