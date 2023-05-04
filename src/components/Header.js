@@ -9,7 +9,6 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-import * as THREE from "three";
 import FOG from "vanta/dist/vanta.fog.min";
 import css from "./Header.module.css";
 
@@ -26,7 +25,6 @@ const Header = () => {
       setVantaEffect(
         FOG({
           el: myRef.current,
-          THREE: THREE,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
