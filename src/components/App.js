@@ -8,7 +8,7 @@ import About from "./About";
 import Publications from "./Publications";
 import Projects from "./Projects";
 import Highlights from "./Highlights";
-import Travel from "./Travel";
+import Travel from "./travel/Travel.js";
 
 const App = () => {
   const [AboutData, setAboutData] = useState(null);
