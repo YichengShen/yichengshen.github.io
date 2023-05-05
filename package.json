@@ -38,11 +38,18 @@
       "react-app/jest"
     ]
   },
+  "babel": {
+    "ignore": ["node_modules/mapbox-gl/dist/mapbox-gl.js"]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not safari < 10",
+      "not chrome < 51",
+      "not android < 5",
+      "not ie < 12"
     ],
     "development": [
       "last 1 chrome version",
