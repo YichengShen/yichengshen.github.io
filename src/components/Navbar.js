@@ -1,13 +1,23 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import css from "./Navbar.module.css";
-import React from "react";
+import TranslateIcon from "@mui/icons-material/Translate";
+import React, { useContext } from "react";
+import { LanguageContext } from "../common/LanguageContext";
 
 const Navbar = () => {
   const enoughWidth = useMediaQuery("(min-width:320px)");
   const someMoreWidth = useMediaQuery("(min-width:468px)");
+
+  const { language, switchLanguage } = useContext(LanguageContext);
+
+  const toggleLanguage = () => {
+    const newLanguage = language === "en" ? "zh" : "en";
+    switchLanguage(newLanguage);
+  };
 
   return (
     <>
@@ -68,6 +78,18 @@ const Navbar = () => {
                           </Link>
                         </div>
                       </Item>
+                      <Item>
+                        <div className={css.underlineLink}>
+                          <Link
+                            target="_blank"
+                            href="https://www.yichengshen.com/a-cookbook"
+                            underline="none"
+                            color="inherit"
+                          >
+                            Misc.
+                          </Link>
+                        </div>
+                      </Item>
                     </React.Fragment>
                   )}
                 </Box>
@@ -80,18 +102,15 @@ const Navbar = () => {
                     alignItems: "flex-start",
                   }}
                 >
-                  <Item>{/* <ChatIcon /> */}</Item>
                   <Item>
-                    <div className={css.underlineLink}>
-                      <Link
-                        target="_blank"
-                        href="https://www.yichengshen.com/a-cookbook"
-                        underline="none"
-                        color="inherit"
-                      >
-                        Misc.
-                      </Link>
-                    </div>
+                    <Button
+                      variant="outlined"
+                      startIcon={<TranslateIcon />}
+                      onClick={toggleLanguage}
+                      sx={{ fontSize: 12, py: 0, px: 1 }}
+                    >
+                      {language === "en" ? "中文" : "English"}
+                    </Button>
                   </Item>
                 </Box>
               </Grid>

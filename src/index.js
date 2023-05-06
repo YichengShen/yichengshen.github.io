@@ -11,9 +11,13 @@ import "./fonts/PlayfairDisplay/PlayfairDisplay-Italic-VariableFont_wght.ttf";
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
 
+import { LanguageProvider } from "./common/LanguageContext";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <LanguageProvider>
+      <App />
+    </LanguageProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
