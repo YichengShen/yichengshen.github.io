@@ -12,7 +12,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FOG from "vanta/dist/vanta.fog.min";
 import css from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
+  const { about } = props;
+  const info = about[0];
+
   const theme = useTheme();
   const smUp = useMediaQuery(theme.breakpoints.up("sm"));
   const smDown = useMediaQuery(theme.breakpoints.down("sm"));
@@ -64,7 +67,7 @@ const Header = () => {
       ref={myRef}
     >
       <Box sx={{ textAlign: "center" }}>
-        <h1 className={css.nameHeading}>Yicheng Shen</h1>
+        <h1 className={css.nameHeading}>{info.name}</h1>
         <Divider flexItem></Divider>
         <br />
 

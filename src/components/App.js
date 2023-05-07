@@ -63,7 +63,7 @@ const App = () => {
       {WebData && (
         <>
           <Navbar web={WebData} />
-          <Header />
+          {AboutData && <Header about={AboutData} />}
           {AboutData && <About web={WebData} about={AboutData} />}
           {ProjectsData && <Projects web={WebData} projects={ProjectsData} />}
           {PublicationsData && (
