@@ -14,7 +14,8 @@ import WebIcon from "@mui/icons-material/Web";
 import MyLink from "./MyLink";
 
 const Publications = (props) => {
-  const { publications } = props;
+  const { web, publications } = props;
+  const W = web[0];
   const data = publications;
 
   return (
@@ -39,7 +40,7 @@ const Publications = (props) => {
             marginLeft: 2,
           }}
         >
-          <h1>Publications</h1>
+          <h1>{W.section_name_publications}</h1>
         </Box>
         {data.map((d) => (
           <Grid container spacing={3} key={d.title} sx={{ marginBottom: 4 }}>

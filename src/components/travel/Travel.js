@@ -19,7 +19,8 @@ import CustomAccordions from "./CustomAccordions";
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_KEY;
 
 const Travel = (props) => {
-  const { travel } = props;
+  const { web, travel } = props;
+  const W = web[0];
 
   let [data, dataDisplayed] = ProcessTravelData(travel);
   let filteredData = data;
@@ -105,7 +106,7 @@ const Travel = (props) => {
             marginLeft: 2,
           }}
         >
-          <h1>Travel</h1>
+          <h1>{W.section_name_travel}</h1>
 
           <FormControl component="fieldset">
             <RadioGroup

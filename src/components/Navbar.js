@@ -8,7 +8,10 @@ import TranslateIcon from "@mui/icons-material/Translate";
 import React, { useContext } from "react";
 import { LanguageContext } from "../common/LanguageContext";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { web } = props;
+  const W = web[0];
+
   const enoughWidth = useMediaQuery("(min-width:320px)");
   const someMoreWidth = useMediaQuery("(min-width:468px)");
 
@@ -36,14 +39,14 @@ const Navbar = () => {
                   <Item>
                     <div className={css.underlineLink}>
                       <Link href="#about" underline="none" color="inherit">
-                        About
+                        {W.section_name_about}
                       </Link>
                     </div>
                   </Item>
                   <Item>
                     <div className={css.underlineLink}>
                       <Link href="#projects" underline="none" color="inherit">
-                        Projects
+                        {W.section_name_projects}
                       </Link>
                     </div>
                   </Item>
@@ -54,7 +57,7 @@ const Navbar = () => {
                         underline="none"
                         color="inherit"
                       >
-                        Publications
+                        {W.section_name_publications}
                       </Link>
                     </div>
                   </Item>
@@ -67,14 +70,14 @@ const Navbar = () => {
                             underline="none"
                             color="inherit"
                           >
-                            Highlights
+                            {W.section_name_highlights}
                           </Link>
                         </div>
                       </Item>
                       <Item>
                         <div className={css.underlineLink}>
                           <Link href="#travel" underline="none" color="inherit">
-                            Travel
+                            {W.section_name_travel}
                           </Link>
                         </div>
                       </Item>
@@ -86,7 +89,7 @@ const Navbar = () => {
                             underline="none"
                             color="inherit"
                           >
-                            Misc.
+                            {W.section_name_misc}
                           </Link>
                         </div>
                       </Item>

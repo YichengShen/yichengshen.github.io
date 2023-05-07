@@ -14,7 +14,8 @@ import ArticleIcon from "@mui/icons-material/Article";
 import MyLink from "./MyLink";
 
 const Projects = (props) => {
-  const { projects } = props;
+  const { web, projects } = props;
+  const W = web[0];
   const data = projects;
 
   let numData = data.length;
@@ -50,7 +51,7 @@ const Projects = (props) => {
               marginLeft: 2,
             }}
           >
-            <h1>Projects</h1>
+            <h1>{W.section_name_projects}</h1>
           </Box>
           <Grid container spacing={4}>
             {data.slice(0, MaxNumProjects).map((d) => (

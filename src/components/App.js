@@ -13,6 +13,7 @@ import { LanguageContext } from "../common/LanguageContext";
 
 const App = () => {
   const { language } = useContext(LanguageContext);
+  const [WebData, setWebData] = useState(null);
   const [AboutData, setAboutData] = useState(null);
   const [PublicationsData, setPublicationsData] = useState(null);
   const [ProjectsData, setProjectsData] = useState(null);
@@ -49,6 +50,7 @@ const App = () => {
       setData(rows);
     };
 
+    getData("web", setWebData);
     getData("about", setAboutData);
     getData("publications", setPublicationsData);
     getData("projects", setProjectsData);
@@ -58,18 +60,24 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <>
-        <Navbar />
-        <Header />
-        {AboutData && <About about={AboutData} />}
-        {ProjectsData && <Projects projects={ProjectsData} />}
-        {PublicationsData && <Publications publications={PublicationsData} />}
-        {HighlightsData && <Highlights highlights={HighlightsData} />}
-        {TravelData && <Travel travel={TravelData} />}
-        <footer style={{ textAlign: "center", marginTop: "2vh" }}>
-          Copyright &copy; {year} Yicheng Shen.
-        </footer>
-      </>
+      {WebData && (
+        <>
+          <Navbar web={WebData} />
+          <Header />
+          {AboutData && <About web={WebData} about={AboutData} />}
+          {ProjectsData && <Projects web={WebData} projects={ProjectsData} />}
+          {PublicationsData && (
+            <Publications web={WebData} publications={PublicationsData} />
+          )}
+          {HighlightsData && (
+            <Highlights web={WebData} highlights={HighlightsData} />
+          )}
+          {TravelData && <Travel web={WebData} travel={TravelData} />}
+          <footer style={{ textAlign: "center", marginTop: "2vh" }}>
+            Copyright &copy; {year} Yicheng Shen.
+          </footer>
+        </>
+      )}
     </ThemeProvider>
   );
 };

@@ -16,7 +16,8 @@ import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
 
 const Highlights = (props) => {
-  const { highlights } = props;
+  const { web, highlights } = props;
+  const W = web[0];
 
   const processData = (highlights) => {
     var dataProcessed = highlights;
@@ -115,7 +116,7 @@ const Highlights = (props) => {
             marginLeft: 2,
           }}
         >
-          <h1>Highlights</h1>
+          <h1>{W.section_name_highlights}</h1>
 
           <FormControl component="fieldset">
             <RadioGroup
