@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { grey } from "@mui/material/colors";
@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import ArticleIcon from "@mui/icons-material/Article";
 
 import MyLink from "./MyLink";
+import { LanguageContext } from "../common/LanguageContext";
 
 const Projects = (props) => {
   const { web, projects } = props;
@@ -137,7 +138,9 @@ const ProjectContent = (props) => {
 const ProjectDate = (props) => {
   const d = props.data;
 
-  const months = [
+  const { language } = useContext(LanguageContext);
+
+  const months_en = [
     "January",
     "February",
     "March",
@@ -151,6 +154,27 @@ const ProjectDate = (props) => {
     "November",
     "December",
   ];
+
+  const months_zh = [
+    "一月",
+    "二月",
+    "三月",
+    "四月",
+    "五月",
+    "六月",
+    "七月",
+    "八月",
+    "九月",
+    "十月",
+    "十一月",
+    "十二月",
+  ];
+
+  let months = months_en;
+  if (language === "zh") {
+    months = months_zh;
+  }
+
   const year = d.year;
   const start_month = months[d.start_month - 1];
   const end_month = months[d.end_month - 1];
