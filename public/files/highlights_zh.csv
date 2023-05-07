@@ -1,19 +1,19 @@
-year,month,day,type,description
-2022,8,31,life,Began my graduate studies at UPenn.
-2022,3,23,achievement,Accepted by UPenn's MSE in Computer and Information Science program.
-2021,10,,achievement,Won a silver medal in a Kaggle competition: Google Landmark Recognition 2021.
-2021,5,24,achievement,Graduated from Boston College with a cum laude distinction.
-2021,5,,achievement,Completed Computer Science Honors Thesis at Boston College.
-2021,5,12,achievement,"My project, GoGreen, received highlights from the Schiller Institute and the CS Department at Boston College."
-2021,3,,achievement,Received NSF Participation Grant to attend IEEE PerCom '21.
-2021,2,,work,Started working as a teaching assistant for Software Engineering course.
-2020,9,25,achievement,Received recognition in ACM Student Research Competition held at MobiCom '20.
-2020,2,,work,Started working as a research assistant in Professor Lewis Tseng's research group.
-2020,1,,work,Started working as a teaching assistant for Algorithms course.
-2019,9,,work,Started working as a teaching assistant for Computer Organization course.
-2019,7,,work,Worked as a summer Analyst Intern at Shanghai Deloitte Tax Ltd. Beijing Branch.
-2018,9,,work,Started working as a teaching assistant for Computer Science I course.
-2017,8,,life,Began my undergraduate studies at Boston College.
-2017,6,10,achievement,Graduated from Oakwood Friends School with the 1st rank in the class.
-2016,12,,life,Received the MVP award in Men's JV basketball team.
-2013,9,,life,Came to the U.S. and began high school at Oakwood Friends School.
+﻿year,month,day,type,description
+2022,8,31,life,开始在宾夕法尼亚大学攻读研究生。
+2022,3,23,achievement,被宾夕法尼亚大学计算机与信息科学硕士专业录取。
+2021,10,,achievement,在Kaggle竞赛：Google Landmark Recognition 2021中获得银牌。
+2021,5,24,achievement,以优秀毕业生、院长荣誉名单等荣誉毕业于波士顿学院。
+2021,5,,achievement,在波士顿学院完成计算机科学荣誉论文。
+2021,5,12,achievement,我的项目GoGreen受到席勒研究所和波士顿学院计算机科学系的表扬。
+2021,3,,achievement,获得NSF参会奖金以参加IEEE PerCom '21。
+2021,2,,work,开始担任软件工程课程的助教。
+2020,9,25,achievement,在MobiCom '20举行的ACM学生研究竞赛中获得认可。
+2020,2,,work,开始在Lewis Tseng教授带领的科研组担任研究助理（RA）。
+2020,1,,work,开始担任算法课程的助教。
+2019,9,,work,开始担任计算机组织课程的助教。
+2019,7,,work,在上海德勤税务咨询有限公司北京分公司担任暑期分析师实习生。
+2018,9,,work,开始担任计算机科学I课程的助教。
+2017,8,,life,开始在波士顿学院（Boston College）攻读本科。
+2017,6,10,achievement,以年级第一名的成绩从Oakwood Friends School毕业。
+2016,12,,life,在高中篮球校队获得MVP奖。
+2013,9,,life,开始在位于美国纽约州的Oakwood Friends School上高中。
