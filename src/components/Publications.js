@@ -48,7 +48,7 @@ const Publications = (props) => {
               <PubImage data={d} />
             </Grid>
             <Grid item xs={12} sm={7} md={8}>
-              <PubContent data={d} />
+              <PubContent w={W} data={d} />
             </Grid>
           </Grid>
         ))}
@@ -106,7 +106,7 @@ const PubContent = (props) => {
         <strong>{d.award ? d.award : ""}</strong>
       </div>
       <div>
-        <PubMaterials data={d} />
+        <PubMaterials w={props.w} data={d} />
       </div>
     </div>
   );
@@ -127,6 +127,7 @@ const BoldedText = ({ text, shouldBeBold }) => {
 };
 
 const PubMaterials = (props) => {
+  const W = props.w;
   const d = props.data;
 
   return (
@@ -146,7 +147,7 @@ const PubMaterials = (props) => {
             text={
               <div>
                 <MenuBookIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Paper
+                {W.publications_link_paper}
               </div>
             }
           />
@@ -160,7 +161,7 @@ const PubMaterials = (props) => {
             text={
               <div>
                 <SlideshowIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Slides
+                {W.publications_link_slides}
               </div>
             }
           />
@@ -174,7 +175,7 @@ const PubMaterials = (props) => {
             text={
               <div>
                 <VideocamIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Video
+                {W.publications_link_video}
               </div>
             }
           />
@@ -187,7 +188,8 @@ const PubMaterials = (props) => {
             link={d.code}
             text={
               <div>
-                <CodeIcon fontSize="small" sx={{ verticalAlign: "sub" }} /> Code
+                <CodeIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
+                {W.publications_link_code}
               </div>
             }
           />
@@ -201,7 +203,7 @@ const PubMaterials = (props) => {
             text={
               <div>
                 <LanguageIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Website
+                {W.publications_link_website}
               </div>
             }
           />
@@ -215,7 +217,7 @@ const PubMaterials = (props) => {
             text={
               <div>
                 <StorageIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Data
+                {W.publications_link_data}
               </div>
             }
           />
@@ -228,7 +230,8 @@ const PubMaterials = (props) => {
             link={d.media}
             text={
               <div>
-                <WebIcon fontSize="small" sx={{ verticalAlign: "sub" }} /> Media
+                <WebIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
+                {W.publications_link_media}
               </div>
             }
           />

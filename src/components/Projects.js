@@ -69,7 +69,7 @@ const Projects = (props) => {
                       <ProjectImage data={d} />
                     </Grid>
                     <Grid item xs={12}>
-                      <ProjectContent data={d} />
+                      <ProjectContent w={W} data={d} />
                     </Grid>
                   </Grid>
                 </Box>
@@ -128,7 +128,7 @@ const ProjectContent = (props) => {
       <div>{d.description}</div>
 
       <div>
-        <ProjectMaterials data={d} />
+        <ProjectMaterials w={props.w} data={d} />
       </div>
     </div>
   );
@@ -167,6 +167,7 @@ const ProjectDate = (props) => {
 };
 
 const ProjectMaterials = (props) => {
+  const W = props.w;
   const d = props.data;
 
   return (
@@ -186,7 +187,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <LanguageIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Website
+                {W.projects_link_website}
               </div>
             }
           />
@@ -200,7 +201,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <SlideshowIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Slides
+                {W.projects_link_slides}
               </div>
             }
           />
@@ -214,7 +215,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <VideocamIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Video
+                {W.projects_link_video}
               </div>
             }
           />
@@ -227,7 +228,8 @@ const ProjectMaterials = (props) => {
             link={d.code}
             text={
               <div>
-                <CodeIcon fontSize="small" sx={{ verticalAlign: "sub" }} /> Code
+                <CodeIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
+                {W.projects_link_code}
               </div>
             }
           />
@@ -241,7 +243,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <StorageIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Data
+                {W.projects_link_data}
               </div>
             }
           />
@@ -255,7 +257,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <ArticleIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Report
+                {W.projects_link_report}
               </div>
             }
           />
