@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { grey, deepPurple } from "@mui/material/colors";
@@ -14,6 +14,8 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
+
+import { LanguageContext } from "../common/LanguageContext";
 
 const Highlights = (props) => {
   const { web, highlights } = props;
@@ -210,20 +212,43 @@ const Highlights = (props) => {
 const HighlightsDate = (props) => {
   const d = props.data;
 
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
+  const { language } = useContext(LanguageContext);
+
+  const months_en = [
+    "January",
+    "February",
+    "March",
+    "April",
     "May",
     "June",
     "July",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
+
+  const months_zh = [
+    "一月",
+    "二月",
+    "三月",
+    "四月",
+    "五月",
+    "六月",
+    "七月",
+    "八月",
+    "九月",
+    "十月",
+    "十一月",
+    "十二月",
+  ];
+
+  let months = months_en;
+  if (language === "zh") {
+    months = months_zh;
+  }
+
   const year = d.year;
   const month = months[d.month - 1];
   const day = d.day;
