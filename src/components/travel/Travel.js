@@ -116,16 +116,20 @@ const Travel = (props) => {
               value={FilterCond}
               onChange={handleFilterChange}
             >
-              <FormControlLabel value="all" control={<Radio />} label="All" />
+              <FormControlLabel
+                value="all"
+                control={<Radio />}
+                label={W.travel_radio_label_all}
+              />
               <FormControlLabel
                 value="memorable"
                 control={<Radio />}
-                label="Memorable"
+                label={W.travel_radio_label_memorable}
               />
               <FormControlLabel
                 value="familiar"
                 control={<Radio />}
-                label="Familiar"
+                label={W.travel_radio_label_familiar}
               />
             </RadioGroup>
           </FormControl>
@@ -189,6 +193,7 @@ const Travel = (props) => {
               }}
             >
               <CustomAccordions
+                w={W}
                 data={dataDisplayed}
                 cityClick={handleCityClick}
               />
