@@ -126,14 +126,26 @@ const Highlights = (props) => {
               value={FilterCond}
               onChange={handleFilterChange}
             >
-              <FormControlLabel value="all" control={<Radio />} label="All" />
+              <FormControlLabel
+                value="all"
+                control={<Radio />}
+                label={W.highlights_radio_label_all}
+              />
               <FormControlLabel
                 value="achievements"
                 control={<Radio />}
-                label="Achievements"
+                label={W.highlights_radio_label_achievements}
               />
-              <FormControlLabel value="work" control={<Radio />} label="Work" />
-              <FormControlLabel value="life" control={<Radio />} label="Life" />
+              <FormControlLabel
+                value="work"
+                control={<Radio />}
+                label={W.highlights_radio_label_work}
+              />
+              <FormControlLabel
+                value="life"
+                control={<Radio />}
+                label={W.highlights_radio_label_life}
+              />
             </RadioGroup>
           </FormControl>
         </Box>
