@@ -119,7 +119,7 @@ const ProjectContent = (props) => {
   return (
     <div>
       <Box sx={{ fontSize: "x-large" }}>
-        <strong>{d.title}</strong>
+        <strong>{d.title_displayed}</strong>
       </Box>
       <Box sx={{ marginBottom: 0.5 }} />
 
