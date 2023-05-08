@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -5,7 +6,8 @@ import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import css from "./Navbar.module.css";
 import TranslateIcon from "@mui/icons-material/Translate";
-import React, { useContext } from "react";
+import { purple } from "@mui/material/colors";
+
 import { LanguageContext } from "../common/LanguageContext";
 
 const Navbar = (props) => {
@@ -116,6 +118,12 @@ const Navbar = (props) => {
                         px: 1,
                         mb: 0.5,
                         whiteSpace: "nowrap",
+                        color: purple[700],
+                        borderColor: purple[700],
+                        "&:hover": {
+                          borderColor: purple[50],
+                          backgroundColor: purple[50],
+                        },
                       }}
                     >
                       {language === "en" ? "中文网页" : "English"}

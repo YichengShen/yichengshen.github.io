@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import { styled } from "@mui/system";
+import { purple } from "@mui/material/colors";
 
 const CustomButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -10,6 +11,7 @@ const CustomButton = styled(Button)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   fontSize: 12,
+  color: purple[300],
   "& .MuiButton-label": {
     display: "flex",
     flexDirection: "column",
@@ -18,6 +20,9 @@ const CustomButton = styled(Button)(({ theme }) => ({
   },
   "& .MuiSvgIcon-root": {
     marginTop: theme.spacing(0.5),
+  },
+  "&:hover": {
+    backgroundColor: purple[50],
   },
 }));
 
