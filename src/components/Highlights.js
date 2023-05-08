@@ -13,8 +13,8 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import Button from "@mui/material/Button";
 
+import ShowMoreButton from "../common/ShowMoreButton";
 import { LanguageContext } from "../common/LanguageContext";
 
 const Highlights = (props) => {
@@ -195,10 +195,15 @@ const Highlights = (props) => {
                 )}
               </Timeline>
               {numData > MaxNumHighlights && (
-                <Box sx={{ textAlign: "center" }}>
-                  <Button size="small" onClick={handleShowMore}>
-                    Show more
-                  </Button>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                >
+                  <ShowMoreButton w={W} showMore={handleShowMore} />
                 </Box>
               )}
             </Box>

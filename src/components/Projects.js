@@ -8,10 +8,10 @@ import VideocamIcon from "@mui/icons-material/Videocam";
 import CodeIcon from "@mui/icons-material/Code";
 import LanguageIcon from "@mui/icons-material/Language";
 import StorageIcon from "@mui/icons-material/Storage";
-import Button from "@mui/material/Button";
 import ArticleIcon from "@mui/icons-material/Article";
 
 import MyLink from "./MyLink";
+import ShowMoreButton from "../common/ShowMoreButton";
 import { LanguageContext } from "../common/LanguageContext";
 
 const Projects = (props) => {
@@ -82,13 +82,14 @@ const Projects = (props) => {
       {numData > MaxNumProjects && (
         <Box
           sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             marginTop: 2,
             textAlign: "center",
           }}
         >
-          <Button size="small" onClick={handleShowMore}>
-            Show more
-          </Button>
+          <ShowMoreButton w={W} showMore={handleShowMore} />
         </Box>
       )}
     </Box>
