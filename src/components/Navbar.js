@@ -110,9 +110,15 @@ const Navbar = (props) => {
                       variant="outlined"
                       startIcon={<TranslateIcon />}
                       onClick={toggleLanguage}
-                      sx={{ fontSize: 12, py: 0, px: 1 }}
+                      sx={{
+                        fontSize: 12,
+                        py: 0,
+                        px: 1,
+                        mb: 0.5,
+                        whiteSpace: "nowrap",
+                      }}
                     >
-                      {language === "en" ? "中文" : "English"}
+                      {language === "en" ? "中文网页" : "English"}
                     </Button>
                   </Item>
                 </Box>
