@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.8761a69a.css",
-    "main.js": "/static/js/main.6dfd0b38.js",
+    "main.css": "/static/css/main.0f62c4be.css",
+    "main.js": "/static/js/main.9d68d7a5.js",
     "static/js/483.9f684e6c.chunk.js": "/static/js/483.9f684e6c.chunk.js",
     "static/js/787.ec479b1a.chunk.js": "/static/js/787.ec479b1a.chunk.js",
+    "static/media/NotoSerifSC-SemiBold.otf": "/static/media/NotoSerifSC-SemiBold.bb0383e856a39ec19323.otf",
+    "static/media/NotoSerifSC-Medium.otf": "/static/media/NotoSerifSC-Medium.7bfb43c89be99a721c38.otf",
+    "static/media/NotoSerifSC-Black.otf": "/static/media/NotoSerifSC-Black.1953fe35ffd51f255cc1.otf",
+    "static/media/LongCang-Regular.ttf": "/static/media/LongCang-Regular.db7247ac2d7e617085ca.ttf",
     "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/static/media/PlayfairDisplay-VariableFont_wght.54971b7248ded7d0d614.ttf",
     "static/media/PlayfairDisplay-Italic-VariableFont_wght.ttf": "/static/media/PlayfairDisplay-Italic-VariableFont_wght.2d297421b9c99741bf1c.ttf",
     "static/media/Georgia.ttf": "/static/media/Georgia.5b8bb278fcab4da4972e.ttf",
@@ -11,13 +15,13 @@
     "static/media/georgia-italic.ttf": "/static/media/georgia-italic.714162e41ae3b2291518.ttf",
     "static/media/georgia-bold.ttf": "/static/media/georgia-bold.a5fad24f075c978ac04b.ttf",
     "index.html": "/index.html",
-    "main.8761a69a.css.map": "/static/css/main.8761a69a.css.map",
-    "main.6dfd0b38.js.map": "/static/js/main.6dfd0b38.js.map",
+    "main.0f62c4be.css.map": "/static/css/main.0f62c4be.css.map",
+    "main.9d68d7a5.js.map": "/static/js/main.9d68d7a5.js.map",
     "483.9f684e6c.chunk.js.map": "/static/js/483.9f684e6c.chunk.js.map",
     "787.ec479b1a.chunk.js.map": "/static/js/787.ec479b1a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8761a69a.css",
-    "static/js/main.6dfd0b38.js"
+    "static/css/main.0f62c4be.css",
+    "static/js/main.9d68d7a5.js"
   ]
 }
