@@ -24,7 +24,7 @@ const About = (props) => {
       id="about"
       sx={{
         bgcolor: grey[100],
-        width: "75vw",
+        width: "80vw",
         padding: "2.5vw",
         marginX: "10vw",
         marginTop: 5,

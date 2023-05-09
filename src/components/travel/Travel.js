@@ -89,7 +89,7 @@ const Travel = (props) => {
       id="travel"
       sx={{
         bgcolor: grey[200],
-        width: "75vw",
+        width: "80vw",
         padding: "2.5vw",
         marginX: "10vw",
         marginTop: 5,

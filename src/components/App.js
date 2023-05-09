@@ -1,7 +1,7 @@
 import { React, useEffect, useState, useContext } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { readString } from "react-papaparse";
-import theme from "./theme";
+import getTheme from "../theme";
 import Navbar from "./Navbar";
 import Header from "./Header";
 import About from "./About";
@@ -9,10 +9,13 @@ import Publications from "./Publications";
 import Projects from "./Projects";
 import Highlights from "./Highlights";
 import Travel from "./travel/Travel.js";
+import CssBaseline from "@mui/material/CssBaseline";
 import { LanguageContext } from "../common/LanguageContext";
 
 const App = () => {
   const { language } = useContext(LanguageContext);
+  const myTheme = getTheme(language);
+
   const [WebData, setWebData] = useState(null);
   const [AboutData, setAboutData] = useState(null);
   const [PublicationsData, setPublicationsData] = useState(null);
@@ -59,9 +62,10 @@ const App = () => {
   }, [language]);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={myTheme}>
       {WebData && (
         <>
+          <CssBaseline />
           <Navbar web={WebData} />
           {AboutData && <Header about={AboutData} />}
           {AboutData && <About web={WebData} about={AboutData} />}

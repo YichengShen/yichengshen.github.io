@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
@@ -11,10 +11,15 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 import FOG from "vanta/dist/vanta.fog.min";
 import css from "./Header.module.css";
+import { LanguageContext } from "../common/LanguageContext";
+import getTheme from "../theme";
 
 const Header = (props) => {
   const { about } = props;
   const info = about[0];
+
+  const { language } = useContext(LanguageContext);
+  const myTheme = getTheme(language);
 
   const theme = useTheme();
   const smUp = useMediaQuery(theme.breakpoints.up("sm"));
@@ -55,7 +60,7 @@ const Header = (props) => {
         width: "80vw",
         height: "80vh",
         marginX: "10vw",
-        marginTop: 2.5,
+        marginTop: 1,
         borderRadius: "25px",
         WebkitBorderRadius: "25px",
         WebkitMaskImage: "-webkit-radial-gradient(white, black)",
@@ -67,7 +72,22 @@ const Header = (props) => {
       ref={myRef}
     >
       <Box sx={{ textAlign: "center" }}>
-        <h1 className={css.nameHeading}>{info.name}</h1>
+        <Box
+          component="h1"
+          className={css.nameHeading}
+          sx={{
+            fontFamily: myTheme.fontMyName,
+            letterSpacing: myTheme.letterSpacingMyName,
+            display: "inline-block",
+            textAlign: "center",
+            width: "100%",
+            marginLeft: `${
+              ((info.name.length - 2) * myTheme.letterSpacingMyName) / 2
+            }px`,
+          }}
+        >
+          {info.name}
+        </Box>
         <Divider flexItem></Divider>
         <br />
 
