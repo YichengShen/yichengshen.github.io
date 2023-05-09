@@ -13,7 +13,18 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { LanguageContext } from "../common/LanguageContext";
 
 const App = () => {
-  const { language } = useContext(LanguageContext);
+  const { language, switchLanguage, hasSwitchedLanguage } =
+    useContext(LanguageContext);
+
+  useEffect(() => {
+    if (!hasSwitchedLanguage) {
+      const userLanguage = navigator.language.split("-")[0];
+      if (userLanguage === "zh") {
+        switchLanguage(userLanguage);
+      }
+    }
+  }, [switchLanguage, hasSwitchedLanguage]);
+
   const myTheme = getTheme(language);
 
   const [WebData, setWebData] = useState(null);
