@@ -5,7 +5,8 @@ import { grey } from "@mui/material/colors";
 import css from "./About.module.css";
 
 const About = (props) => {
-  const { about } = props;
+  const { web, about } = props;
+  const W = web[0];
   const info = about[0];
 
   const [TimeStamp, setTimeStamp] = useState(0);
@@ -23,7 +24,7 @@ const About = (props) => {
       id="about"
       sx={{
         bgcolor: grey[100],
-        width: "75vw",
+        width: "80vw",
         padding: "2.5vw",
         marginX: "10vw",
         marginTop: 5,
@@ -42,7 +43,7 @@ const About = (props) => {
             marginLeft: 2,
           }}
         >
-          <h1>About</h1>
+          <h1>{W.section_name_about}</h1>
         </Box>
         <Grid container>
           <Grid item xs={12} sm>

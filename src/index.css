@@ -29,25 +29,32 @@
     url(./fonts/PlayfairDisplay/PlayfairDisplay-Italic-VariableFont_wght.ttf)
       format("truetype");
 }
-
-body {
-  color: rgb(0, 18, 66);
-  margin: 0;
-  font-family: Georgia, GeorgiaBold, GeorgiaItalic, GeorgiaBoldItalic,
-    PlayfairDisplay, PlayfairDisplayItalic, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "NotoSerifSCMedium";
+  src: local("NotoSerifSCMedium"),
+    url(./fonts/NotoSerifSC/NotoSerifSC-Medium.otf)
+      format("truetype");
+}
+@font-face {
+  font-family: "NotoSerifSCSemiBold";
+  src: local("NotoSerifSCSemiBold"),
+    url(./fonts/NotoSerifSC/NotoSerifSC-SemiBold.otf)
+      format("truetype");
+}
+@font-face {
+  font-family: "NotoSerifSCBlack";
+  src: local("NotoSerifSCBlack"),
+    url(./fonts/NotoSerifSC/NotoSerifSC-Black.otf)
+      format("truetype");
+}
+@font-face {
+  font-family: "LongCangRegular";
+  src: local("LongCangRegular"),
+    url(./fonts/Long_Cang/LongCang-Regular.ttf)
+      format("truetype");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-h1,
-h2 {
-  font-family: PlayfairDisplay;
-  font-weight: 800;
 }

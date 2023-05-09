@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { grey } from "@mui/material/colors";
@@ -8,13 +8,15 @@ import VideocamIcon from "@mui/icons-material/Videocam";
 import CodeIcon from "@mui/icons-material/Code";
 import LanguageIcon from "@mui/icons-material/Language";
 import StorageIcon from "@mui/icons-material/Storage";
-import Button from "@mui/material/Button";
 import ArticleIcon from "@mui/icons-material/Article";
 
 import MyLink from "./MyLink";
+import ShowMoreButton from "../common/ShowMoreButton";
+import { LanguageContext } from "../common/LanguageContext";
 
 const Projects = (props) => {
-  const { projects } = props;
+  const { web, projects } = props;
+  const W = web[0];
   const data = projects;
 
   let numData = data.length;
@@ -29,7 +31,7 @@ const Projects = (props) => {
       id="projects"
       sx={{
         bgcolor: grey[200],
-        width: "75vw",
+        width: "80vw",
         padding: "2.5vw",
         marginX: "10vw",
         marginTop: 5,
@@ -50,7 +52,7 @@ const Projects = (props) => {
               marginLeft: 2,
             }}
           >
-            <h1>Projects</h1>
+            <h1>{W.section_name_projects}</h1>
           </Box>
           <Grid container spacing={4}>
             {data.slice(0, MaxNumProjects).map((d) => (
@@ -68,7 +70,7 @@ const Projects = (props) => {
                       <ProjectImage data={d} />
                     </Grid>
                     <Grid item xs={12}>
-                      <ProjectContent data={d} />
+                      <ProjectContent w={W} data={d} />
                     </Grid>
                   </Grid>
                 </Box>
@@ -80,13 +82,14 @@ const Projects = (props) => {
       {numData > MaxNumProjects && (
         <Box
           sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             marginTop: 2,
             textAlign: "center",
           }}
         >
-          <Button size="small" onClick={handleShowMore}>
-            Show more
-          </Button>
+          <ShowMoreButton w={W} showMore={handleShowMore} />
         </Box>
       )}
     </Box>
@@ -117,7 +120,7 @@ const ProjectContent = (props) => {
   return (
     <div>
       <Box sx={{ fontSize: "x-large" }}>
-        <strong>{d.title}</strong>
+        <strong>{d.title_displayed}</strong>
       </Box>
       <Box sx={{ marginBottom: 0.5 }} />
 
@@ -127,7 +130,7 @@ const ProjectContent = (props) => {
       <div>{d.description}</div>
 
       <div>
-        <ProjectMaterials data={d} />
+        <ProjectMaterials w={props.w} data={d} />
       </div>
     </div>
   );
@@ -136,7 +139,9 @@ const ProjectContent = (props) => {
 const ProjectDate = (props) => {
   const d = props.data;
 
-  const months = [
+  const { language } = useContext(LanguageContext);
+
+  const months_en = [
     "January",
     "February",
     "March",
@@ -150,6 +155,27 @@ const ProjectDate = (props) => {
     "November",
     "December",
   ];
+
+  const months_zh = [
+    "一月",
+    "二月",
+    "三月",
+    "四月",
+    "五月",
+    "六月",
+    "七月",
+    "八月",
+    "九月",
+    "十月",
+    "十一月",
+    "十二月",
+  ];
+
+  let months = months_en;
+  if (language === "zh") {
+    months = months_zh;
+  }
+
   const year = d.year;
   const start_month = months[d.start_month - 1];
   const end_month = months[d.end_month - 1];
@@ -166,6 +192,7 @@ const ProjectDate = (props) => {
 };
 
 const ProjectMaterials = (props) => {
+  const W = props.w;
   const d = props.data;
 
   return (
@@ -185,7 +212,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <LanguageIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Website
+                {W.projects_link_website}
               </div>
             }
           />
@@ -199,7 +226,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <SlideshowIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Slides
+                {W.projects_link_slides}
               </div>
             }
           />
@@ -213,7 +240,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <VideocamIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Video
+                {W.projects_link_video}
               </div>
             }
           />
@@ -226,7 +253,8 @@ const ProjectMaterials = (props) => {
             link={d.code}
             text={
               <div>
-                <CodeIcon fontSize="small" sx={{ verticalAlign: "sub" }} /> Code
+                <CodeIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
+                {W.projects_link_code}
               </div>
             }
           />
@@ -240,7 +268,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <StorageIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Data
+                {W.projects_link_data}
               </div>
             }
           />
@@ -254,7 +282,7 @@ const ProjectMaterials = (props) => {
             text={
               <div>
                 <ArticleIcon fontSize="small" sx={{ verticalAlign: "sub" }} />{" "}
-                Report
+                {W.projects_link_report}
               </div>
             }
           />

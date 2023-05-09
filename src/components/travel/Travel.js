@@ -19,7 +19,8 @@ import CustomAccordions from "./CustomAccordions";
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_KEY;
 
 const Travel = (props) => {
-  const { travel } = props;
+  const { web, travel } = props;
+  const W = web[0];
 
   let [data, dataDisplayed] = ProcessTravelData(travel);
   let filteredData = data;
@@ -88,7 +89,7 @@ const Travel = (props) => {
       id="travel"
       sx={{
         bgcolor: grey[200],
-        width: "75vw",
+        width: "80vw",
         padding: "2.5vw",
         marginX: "10vw",
         marginTop: 5,
@@ -105,7 +106,7 @@ const Travel = (props) => {
             marginLeft: 2,
           }}
         >
-          <h1>Travel</h1>
+          <h1>{W.section_name_travel}</h1>
 
           <FormControl component="fieldset">
             <RadioGroup
@@ -115,16 +116,20 @@ const Travel = (props) => {
               value={FilterCond}
               onChange={handleFilterChange}
             >
-              <FormControlLabel value="all" control={<Radio />} label="All" />
+              <FormControlLabel
+                value="all"
+                control={<Radio />}
+                label={W.travel_radio_label_all}
+              />
               <FormControlLabel
                 value="memorable"
                 control={<Radio />}
-                label="Memorable"
+                label={W.travel_radio_label_memorable}
               />
               <FormControlLabel
                 value="familiar"
                 control={<Radio />}
-                label="Familiar"
+                label={W.travel_radio_label_familiar}
               />
             </RadioGroup>
           </FormControl>
@@ -188,6 +193,7 @@ const Travel = (props) => {
               }}
             >
               <CustomAccordions
+                w={W}
                 data={dataDisplayed}
                 cityClick={handleCityClick}
               />

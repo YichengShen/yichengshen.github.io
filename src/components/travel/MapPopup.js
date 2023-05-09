@@ -1,5 +1,8 @@
+import React, { useContext } from "react";
 import { Popup } from "react-map-gl";
 import Box from "@mui/material/Box";
+
+import { LanguageContext } from "../../common/LanguageContext";
 
 const MapPopup = ({ d, closePopup }) => {
   return (
@@ -30,20 +33,43 @@ const MapPopup = ({ d, closePopup }) => {
 const PopupDate = (props) => {
   const d = props.data;
 
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
+  const { language } = useContext(LanguageContext);
+
+  const months_en = [
+    "January",
+    "February",
+    "March",
+    "April",
     "May",
     "June",
     "July",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
+
+  const months_zh = [
+    "一月",
+    "二月",
+    "三月",
+    "四月",
+    "五月",
+    "六月",
+    "七月",
+    "八月",
+    "九月",
+    "十月",
+    "十一月",
+    "十二月",
+  ];
+
+  let months = months_en;
+  if (language === "zh") {
+    months = months_zh;
+  }
+
   const year = d.year;
   const month = months[d.month - 1];
 

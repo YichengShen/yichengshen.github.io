@@ -13,11 +13,13 @@
 @media screen and (min-width: 769px) {
   .nameHeading {
     font-size: 7vw;
+    min-width: 50vh;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .nameHeading {
     font-size: 5vw;
+    min-width: 50vh;
   }
 }

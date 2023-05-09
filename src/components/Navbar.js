@@ -1,13 +1,28 @@
+import React, { useContext } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import css from "./Navbar.module.css";
-import React from "react";
+import TranslateIcon from "@mui/icons-material/Translate";
+import { purple } from "@mui/material/colors";
 
-const Navbar = () => {
+import { LanguageContext } from "../common/LanguageContext";
+
+const Navbar = (props) => {
+  const { web } = props;
+  const W = web[0];
+
   const enoughWidth = useMediaQuery("(min-width:320px)");
   const someMoreWidth = useMediaQuery("(min-width:468px)");
+
+  const { language, switchLanguage } = useContext(LanguageContext);
+
+  const toggleLanguage = () => {
+    const newLanguage = language === "en" ? "zh" : "en";
+    switchLanguage(newLanguage);
+  };
 
   return (
     <>
@@ -26,14 +41,14 @@ const Navbar = () => {
                   <Item>
                     <div className={css.underlineLink}>
                       <Link href="#about" underline="none" color="inherit">
-                        About
+                        {W.section_name_about}
                       </Link>
                     </div>
                   </Item>
                   <Item>
                     <div className={css.underlineLink}>
                       <Link href="#projects" underline="none" color="inherit">
-                        Projects
+                        {W.section_name_projects}
                       </Link>
                     </div>
                   </Item>
@@ -44,7 +59,7 @@ const Navbar = () => {
                         underline="none"
                         color="inherit"
                       >
-                        Publications
+                        {W.section_name_publications}
                       </Link>
                     </div>
                   </Item>
@@ -57,14 +72,26 @@ const Navbar = () => {
                             underline="none"
                             color="inherit"
                           >
-                            Highlights
+                            {W.section_name_highlights}
                           </Link>
                         </div>
                       </Item>
                       <Item>
                         <div className={css.underlineLink}>
                           <Link href="#travel" underline="none" color="inherit">
-                            Travel
+                            {W.section_name_travel}
+                          </Link>
+                        </div>
+                      </Item>
+                      <Item>
+                        <div className={css.underlineLink}>
+                          <Link
+                            target="_blank"
+                            href="https://www.yichengshen.com/a-cookbook"
+                            underline="none"
+                            color="inherit"
+                          >
+                            {W.section_name_misc}
                           </Link>
                         </div>
                       </Item>
@@ -80,18 +107,27 @@ const Navbar = () => {
                     alignItems: "flex-start",
                   }}
                 >
-                  <Item>{/* <ChatIcon /> */}</Item>
                   <Item>
-                    <div className={css.underlineLink}>
-                      <Link
-                        target="_blank"
-                        href="https://www.yichengshen.com/a-cookbook"
-                        underline="none"
-                        color="inherit"
-                      >
-                        Misc.
-                      </Link>
-                    </div>
+                    <Button
+                      variant="outlined"
+                      startIcon={<TranslateIcon />}
+                      onClick={toggleLanguage}
+                      sx={{
+                        fontSize: 12,
+                        py: 0,
+                        px: 1,
+                        mb: 0.5,
+                        whiteSpace: "nowrap",
+                        color: purple[700],
+                        borderColor: purple[700],
+                        "&:hover": {
+                          borderColor: purple[50],
+                          backgroundColor: purple[50],
+                        },
+                      }}
+                    >
+                      {language === "en" ? "中文网页" : "English"}
+                    </Button>
                   </Item>
                 </Box>
               </Grid>

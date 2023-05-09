@@ -10,7 +10,10 @@ import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
 import css from "./CustomAccordions.module.css";
 
 const CustomAccordions = (props) => {
-  const { data, cityClick } = props;
+  const { w, data, cityClick } = props;
+
+  const W = w;
+
   const currentCity = data.currentCity;
   const cities = data.cities;
   const citiesMemorable = data.citiesMemorable;
@@ -41,7 +44,7 @@ const CustomAccordions = (props) => {
               flexShrink: 0,
             }}
           >
-            My Current Location
+            {W.travel_title_current_location}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -67,7 +70,7 @@ const CustomAccordions = (props) => {
               flexShrink: 0,
             }}
           >
-            Number of Cities Visited
+            {W.travel_title_number_visited}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -93,10 +96,10 @@ const CustomAccordions = (props) => {
               flexShrink: 0,
             }}
           >
-            Memorable Cities
+            {W.travel_title_memorable_cities}
           </Typography>
           <Typography sx={{ color: "text.secondary" }}>
-            These are places I want to revisit.
+            {W.travel_description_memorable}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -143,10 +146,10 @@ const CustomAccordions = (props) => {
               flexShrink: 0,
             }}
           >
-            Familiar Cities
+            {W.travel_title_familiar_cities}
           </Typography>
           <Typography sx={{ color: "text.secondary" }}>
-            These are places I stayed for more than a year.
+            {W.travel_description_familiar}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>

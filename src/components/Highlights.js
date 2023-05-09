@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { grey, deepPurple } from "@mui/material/colors";
@@ -13,10 +13,13 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import Button from "@mui/material/Button";
+
+import ShowMoreButton from "../common/ShowMoreButton";
+import { LanguageContext } from "../common/LanguageContext";
 
 const Highlights = (props) => {
-  const { highlights } = props;
+  const { web, highlights } = props;
+  const W = web[0];
 
   const processData = (highlights) => {
     var dataProcessed = highlights;
@@ -98,7 +101,7 @@ const Highlights = (props) => {
       id="highlights"
       sx={{
         bgcolor: grey[200],
-        width: "75vw",
+        width: "80vw",
         padding: "2.5vw",
         marginX: "10vw",
         marginTop: 5,
@@ -115,7 +118,7 @@ const Highlights = (props) => {
             marginLeft: 2,
           }}
         >
-          <h1>Highlights</h1>
+          <h1>{W.section_name_highlights}</h1>
 
           <FormControl component="fieldset">
             <RadioGroup
@@ -125,14 +128,26 @@ const Highlights = (props) => {
               value={FilterCond}
               onChange={handleFilterChange}
             >
-              <FormControlLabel value="all" control={<Radio />} label="All" />
+              <FormControlLabel
+                value="all"
+                control={<Radio />}
+                label={W.highlights_radio_label_all}
+              />
               <FormControlLabel
                 value="achievements"
                 control={<Radio />}
-                label="Achievements"
+                label={W.highlights_radio_label_achievements}
               />
-              <FormControlLabel value="work" control={<Radio />} label="Work" />
-              <FormControlLabel value="life" control={<Radio />} label="Life" />
+              <FormControlLabel
+                value="work"
+                control={<Radio />}
+                label={W.highlights_radio_label_work}
+              />
+              <FormControlLabel
+                value="life"
+                control={<Radio />}
+                label={W.highlights_radio_label_life}
+              />
             </RadioGroup>
           </FormControl>
         </Box>
@@ -180,10 +195,15 @@ const Highlights = (props) => {
                 )}
               </Timeline>
               {numData > MaxNumHighlights && (
-                <Box sx={{ textAlign: "center" }}>
-                  <Button size="small" onClick={handleShowMore}>
-                    Show more
-                  </Button>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                >
+                  <ShowMoreButton w={W} showMore={handleShowMore} />
                 </Box>
               )}
             </Box>
@@ -197,20 +217,43 @@ const Highlights = (props) => {
 const HighlightsDate = (props) => {
   const d = props.data;
 
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
+  const { language } = useContext(LanguageContext);
+
+  const months_en = [
+    "January",
+    "February",
+    "March",
+    "April",
     "May",
     "June",
     "July",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
+
+  const months_zh = [
+    "一月",
+    "二月",
+    "三月",
+    "四月",
+    "五月",
+    "六月",
+    "七月",
+    "八月",
+    "九月",
+    "十月",
+    "十一月",
+    "十二月",
+  ];
+
+  let months = months_en;
+  if (language === "zh") {
+    months = months_zh;
+  }
+
   const year = d.year;
   const month = months[d.month - 1];
   const day = d.day;
