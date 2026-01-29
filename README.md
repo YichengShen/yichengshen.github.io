@@ -6,7 +6,7 @@ A personal website built with React showcasing publications, projects, etc.
 
 ## Link to My Personal Website
 
-[www.yichengshen.com](www.yichengshen.com)
+[yichengshen.github.io](https://yichengshen.github.io)
 
 ## How to Use as A Template
 

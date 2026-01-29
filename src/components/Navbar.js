@@ -87,7 +87,7 @@ const Navbar = (props) => {
                         <div className={css.underlineLink}>
                           <Link
                             target="_blank"
-                            href="https://www.yichengshen.com/a-cookbook"
+                            href="https://yichengshen.github.io/a-cookbook"
                             underline="none"
                             color="inherit"
                           >
