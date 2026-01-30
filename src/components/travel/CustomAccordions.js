@@ -49,7 +49,7 @@ const CustomAccordions = (props) => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography variant="h6" sx={{ textAlign: "center" }}>
-            {currentCity.city}, {currentCity.country}
+            {currentCity ? `${currentCity.city}, ${currentCity.country}` : "-"}
           </Typography>
         </AccordionDetails>
       </Accordion>

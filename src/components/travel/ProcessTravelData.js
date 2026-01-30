@@ -18,10 +18,18 @@ const ProcessTravelData = (trips) => {
   var currentCityObj = null;
 
   for (var i in trips) {
-    const city = trips[i].city.toLowerCase();
-    if (cityArray.includes(city)) {
+    const rawCity = (trips[i].city || "").trim();
+    const rawCountry = (trips[i].country || "").trim();
+    if (!rawCity || !rawCountry) {
+      continue;
+    }
+
+    const cityKey = `${rawCity.toLowerCase()}|${rawCountry.toLowerCase()}`;
+    if (cityArray.includes(cityKey)) {
       var previousTrip = dataProcessed.find(
-        (d) => d.city.toLowerCase() === city
+        (d) =>
+          d.city.toLowerCase() === rawCity.toLowerCase() &&
+          d.country.toLowerCase() === rawCountry.toLowerCase()
       );
       if (trips[i].current.toLowerCase() === "true") {
         previousTrip.current = true;
@@ -36,18 +44,29 @@ const ProcessTravelData = (trips) => {
       if (trips[i].familiar.toLowerCase() === "true") {
         previousTrip.familiar = true;
       }
+      const nextYear = parseInt(trips[i].year);
+      const nextMonth = parseInt(trips[i].month);
+      if (
+        !isNaN(nextYear) &&
+        !isNaN(nextMonth) &&
+        (nextYear > previousTrip.year ||
+          (nextYear === previousTrip.year && nextMonth > previousTrip.month))
+      ) {
+        previousTrip.year = nextYear;
+        previousTrip.month = nextMonth;
+      }
     } else {
-      cityArray.push(city);
+      cityArray.push(cityKey);
 
       var newTrip = Object.create(trip);
-      newTrip.country = trips[i].country;
-      newTrip.city = trips[i].city;
+      newTrip.country = rawCountry;
+      newTrip.city = rawCity;
       newTrip.lng = parseFloat(trips[i].lng);
       newTrip.lat = parseFloat(trips[i].lat);
       newTrip.year = parseInt(trips[i].year);
       newTrip.month = parseInt(trips[i].month);
       newTrip.show = trips[i].show.toLowerCase() === "true";
-      newTrip.purpose = trips[i].purpose;
+      newTrip.purpose = trips[i].purpose || "";
       newTrip.memorable = trips[i].memorable.toLowerCase() === "true";
       newTrip.familiar = trips[i].familiar.toLowerCase() === "true";
       newTrip.current = trips[i].current.toLowerCase() === "true";
