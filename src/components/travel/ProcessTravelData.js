@@ -23,6 +23,10 @@ const ProcessTravelData = (trips) => {
       var previousTrip = dataProcessed.find(
         (d) => d.city.toLowerCase() === city
       );
+      if (trips[i].current.toLowerCase() === "true") {
+        previousTrip.current = true;
+        currentCityObj = { city: previousTrip.city, country: previousTrip.country };
+      }
       if (trips[i].show.toLowerCase() === "true") {
         previousTrip.show = true;
       }
